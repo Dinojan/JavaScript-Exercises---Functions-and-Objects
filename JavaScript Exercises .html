@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Exercises</title>
+</head>
+<body>
+				<!-- Q.1-->
+1.Write the function to calculate  a number’s square?<br>
+	<p id="myid1"></p>
+				
+				<!--Q.2-->
+<div>
+2.Declare 2 variables as num1 and num2, and <br><pre>
+	a.Write a function to add these two numbers and  name the function as addNum.<br><br>
+		Num1 = <input type="text" id="value1" name="value1" value=""/><br>
+   		Num2 = <input type="text" id="value2" name="value2" value=""/><br><br>
+	b.Write a function to multiply these two numbers and  name the function as multiNum.<br>
+	<input type="button" name="Sumbit" value="Multiply" onclick="javascript:multiNum()"/> <br>
+        Answer Multiply = <input type="text" id="multiply" name="multiply" value=""/><br><br>
+    	c.Write a function to subtract these two numbers and  name the function as subtractNum.<br><br>
+    	<input type="button" name="Sumbit" value="Subtract" onclick="javascript:subtractNum()"/> <br>
+        Answer Subtract = <input type="text" id="subtract" name="subtract" value=""/><br><br>
+        d.Write a function to divide these two numbers and  name the function as divideNum.<br><br>
+        <input type="button" name="Sumbit" value="Divide" onclick="javascript:divideNum()"/> <br>
+        Answer Divide = <input type="text" id="divide" name="divide" value=""/><br><br>
+
+</pre>
+		<!--Q.3-->
+3.Write a function to print “Hello World” in an alert ?<pre>
+	<button onclick="myAlert()">Click</button>
+</pre>
+		<!--Q.4-->
+4.Write a function to calculate the volume of a cuboid    (Volume=length*width,*height)?
+<pre>
+	Length = <input type="text" id="val1" name="val1" value=""/><br>
+   	Width = <input type="text" id="val2" name="val2" value=""/><br>
+   	Height = <input type="text" id="val3" name="val3" value=""/><br>
+   	<input type="button" name="Sumbit" value="Volume" onclick="javascript:myvolume()"/> <br>
+    Answer Volume = <input type="text" id="vol" name="vol" value=""/><br><br>
+</pre>
+		<!--Q.5-->
+5.Create a object (firstName - Nimal , lastName - Raj, age - 15, city - Kandy) and assign it to a variable named person. Write the JS code to have the following output?
+<b>
+	<p id="myid2"></p>
+</b>
+6.   Create a object ( courseName- BIT, courseFee- Rs 150 000, startDate- 12.06.2018, center- Our Office) and assign it to a variable named course. Write the JS code to have the following output?
+<b><pre>
+			<p id="myid3"></p><p id="myid4"></p><p id="myid5"></p><p id="myid6"></p>
+</pre>
+</b>
+
+
+</div>
+<script>
+	//Q.1
+function square(p) {
+  return p * p;
+}
+document.getElementById("myid1").innerHTML = square(4);
+
+// Q.2
+
+var num1,num2;
+//Q.2.a
+ function addNum()
+                {
+                  num1 = parseInt(document.getElementById("value1").value);
+                  num2 = parseInt(document.getElementById("value2").value);
+              }
+                //Q.2.b
+ function multiNum() {
+ 				num1 = parseInt(document.getElementById("value1").value);
+                num2 = parseInt(document.getElementById("value2").value);
+ 				var ansD = document.getElementById("multiply");
+                     ansD.value = num1 * num2;
+ }
+ 				//Q.2.c
+ function subtractNum() {
+ 				num1 = parseInt(document.getElementById("value1").value);
+                num2 = parseInt(document.getElementById("value2").value);
+ 				var ansD = document.getElementById("subtract");
+                     ansD.value = num1 - num2;
+ }
+ 				//Q.2.c
+ function divideNum() {
+ 				num1 = parseInt(document.getElementById("value1").value);
+                num2 = parseInt(document.getElementById("value2").value);
+ 				var ansD = document.getElementById("divide");
+                     ansD.value = num1 / num2;
+ }
+                 //Q.3
+  function myAlert() {
+  	window.alert("Hello World!");
+}
+		//Q.4
+function myvolume() {
+	var length,width,height,volume;
+	length = parseInt(document.getElementById("val1").value);
+	width = parseInt(document.getElementById("val2").value);
+	height = parseInt(document.getElementById("val3").value);
+	volume = document.getElementById("vol");
+	volume.value = length * width * height;
+}	
+ 			//Q.5
+ var person = {firstName:"Nimal", lastName:"Raj", age:15, city:"Kandy"};
+ document.getElementById("myid2").innerHTML =
+"My name is " + person["firstName"]+" " +person["lastName"] +". "+" I'm"+" "+person["age"]+" years old."+" I live in"+" "+person["city"]+".";
+			//Q.6
+var course = {courseName:"BIT", courseFee:"Rs 150 000", startDate:" 12.06.2018", center:" Our Office"};
+document.getElementById("myid3").innerHTML ="Course Name: "+course["courseName"];
+document.getElementById("myid4").innerHTML ="Course Fee:  "+ course["courseFee"];
+document.getElementById("myid5").innerHTML ="Start Date:  "+ course["startDate"];
+document.getElementById("myid6").innerHTML ="Center:      "+ course["center"];
+</script>
+    
+
+
+    
+
+</body>
+</html>
